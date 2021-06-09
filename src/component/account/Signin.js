@@ -53,7 +53,7 @@ const BtnSignIn = styled.Text`
   padding: 10px;
   color: #ffffff;
 `;
-export default function Signin() {
+export default function Signin({navigation}) {
   return (
     <Signview>
       <Grid style={{ marginTop: Constants.statusBarHeight }}>
@@ -82,7 +82,7 @@ export default function Signin() {
           </Col>
           <Col>
             <Button style={style.regiBtn}>
-              <AuthBtnTxt style={{ color: "#007AFF" }}>Registration</AuthBtnTxt>
+              <AuthBtnTxt style={{ color: "#007AFF" }} onPress={() =>navigation.navigate('Createaccount')}>Registration</AuthBtnTxt>
             </Button>
           </Col>
         </Row>

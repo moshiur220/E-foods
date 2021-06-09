@@ -18,6 +18,7 @@ import {
   Roboto_900Black_Italic,
 } from "@expo-google-fonts/roboto";
 import Signin from "./src/component/account/Signin";
+import CreateAccount from "./src/component/account/CreateAccount";
 
 // Main Stack
 const Stack = createStackNavigator();
@@ -25,6 +26,7 @@ const StackWithoutHeader = () => {
   return (
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="Signin" component={Signin} />
+      <Stack.Screen name="Createaccount" component={CreateAccount} />
     </Stack.Navigator>
   );
 };
