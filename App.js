@@ -19,14 +19,16 @@ import {
 } from "@expo-google-fonts/roboto";
 import Signin from "./src/component/account/Signin";
 import CreateAccount from "./src/component/account/CreateAccount";
+import Restaturants from "./src/component/restaturant/Restaturants";
 
 // Main Stack
 const Stack = createStackNavigator();
 const StackWithoutHeader = () => {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator headerMode="none" initialRouteName="Restaturants">
       <Stack.Screen name="Signin" component={Signin} />
       <Stack.Screen name="Createaccount" component={CreateAccount} />
+      <Stack.Screen name="Restaturants" component={Restaturants} />
     </Stack.Navigator>
   );
 };

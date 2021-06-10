@@ -13,7 +13,7 @@ export function UiButton(props) {
 //Default input
 export function UiInput(props) {
   return (
-    <TextInput {...props} selectionColor="#FF9500" underlineColor="#FF9500" style={[style.uiInput, props.style]}/>
+    <TextInput {...props} selectionColor="#FF9500" underlineColor="#FFFFFF" style={[style.uiInput, props.style]}/>
   );
 }
 
@@ -52,14 +52,26 @@ export function UiTitle1(props) {
         <Text style={[style.productTitle, props.style]}> {props.children}</Text>
     );
   }
+  export function ProductViewLink(props) {
+    return (
+        <Text style={[style.productViewLink, props.style]}> {props.children}</Text>
+    );
+  }  
+  
+  export function Container(props) {
+    return (
+        <View style={[style.container, props.style]}> {props.children}</View>
+    );
+  }
 
 
 
 const style = StyleSheet.create({
   uiButton: {
     width: "100%",
-    paddingTop: 4,
-    paddingBottom: 4,
+    paddingTop: 7,
+    paddingBottom: 7,
+    borderRadius:8,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -103,11 +115,18 @@ const style = StyleSheet.create({
       color: "#77767E"
   },
   productHead:{
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Roboto_700Bold",
     fontStyle:"normal",
     fontSize:20,
     lineHeight:23,
     color: "#232326"
+  },
+  productViewLink:{
+    fontFamily: "Roboto_400Regular",
+    fontStyle:"normal",
+    fontSize:16,
+    lineHeight:19,
+    color: "#FF9500"
   },
   productTitle:{
     fontFamily: "Roboto_400Regular",
@@ -115,5 +134,11 @@ const style = StyleSheet.create({
     fontSize:15,
     lineHeight:18,
     color: "#232326"
+  },
+  container:{
+    display: "flex",
+    flexDirection: "column",
+    // alignItems: "center",
+    width: "100%"
   }
 });

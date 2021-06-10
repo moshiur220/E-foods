@@ -85,10 +85,23 @@ export const globalStyle = StyleSheet.create({
     fontWeight: "300",
     fontStyle: "normal",
   },
-  container: {
+  mainContainer: {
     flex: 1,
     paddingLeft: 20,
     paddingRight: 20,
+    backgroundColor: "#F7F7FA",
+  },
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    // alignItems: "center",
+    width: "100%",
+  },
+  rowContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "100%",
   },
   statusBar: {
     marginTop: Constants.statusBarHeight,
@@ -96,8 +109,11 @@ export const globalStyle = StyleSheet.create({
   btnBorderRadius: {
     borderRadius: 8,
   },
+  productBorderRadius: {
+    borderRadius: 4,
+  },
   // Flex Box
-  dFlex: {
+  flexD: {
     display: "flex",
   },
   flexRow: {
@@ -110,6 +126,41 @@ export const globalStyle = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  //justifyContent
+  flexJcCenter: {
+    justifyContent: "center",
+  },
+  flexJcStart: {
+    justifyContent: "flex-start",
+  },
+  flexJcSpaceAround: {
+    justifyContent: "space-around",
+  },
+  flexJcSpaceBetween: {
+    justifyContent: "space-between",
+  },
+  flexJcSpaceEvenly: {
+    justifyContent: "space-evenly",
+  },
+  flexJcEnd: {
+    justifyContent: "flex-end",
+  },
+  flexAiStart: {
+    alignItems: "flex-start",
+  },
+  flexAiCenter: {
+    alignItems: "center",
+  },
+  flexAiEnd: {
+    alignItems: "flex-end",
+  },
+  flexAiStretch: {
+    alignItems: "stretch",
+  },
+  flexAiBaseline: {
+    alignItems: "baseline",
+  },
+
   textCenter: {
     textAlign: "center",
   },
@@ -132,7 +183,7 @@ export const globalStyle = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 2,
     },
     shadowOpacity: 0.18,
     shadowRadius: 1.0,
@@ -218,6 +269,15 @@ export class StyleCustom {
       },
       bRadius: {
         borderRadius: value,
+      },
+      w100: {
+        width:`${value}%`,
+      },
+      w: {
+        width:value,
+      },
+      h: {
+       height:value,
       },
     });
   }
